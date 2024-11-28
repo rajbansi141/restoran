@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restoran</title>
+    <!-- font links -->
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
+
+    <style>
+        *{
+            text-decoration: none;
+        }
+        body{
+            margin: 0 2rem;
+            /* border: 2px solid black; */
+        }
+        .header{
+            display: flex;
+            justify-content: space-between;
+            /* background-color: #1F1527; */
+
+        }
+
+        .navbar{
+            display: flex;
+            flex:end;
+            align-items: center;
+            justify-content: space-between;
+           
+        }
+        .nav-items,ul,li{
+            display: flex;
+            justify-content: space-around;
+            text-decoration: none;
+            gap: 4rem;
+            font-size: 1.2rem;
+            font-weight: 15px;
+
+        }
+        .nav-items,ul,li:after{
+            color: #FEA116;
+            
+            
+          
+        }
+        .book{
+            margin-top: 10px;
+        }
+        button{
+            background-color: #FEA116; 
+            padding: 10px;
+            color: white;
+            margin-left: 5px;
+        }
+        .first-front{
+            display: flex;
+            justify-content: space-between;
+            border: 2px solid black;
+            
+        }
+        /* .text-contain, rotating-pizza{
+            border: 2px solid black;
+        } */
+         .text-contain{
+            width: 50%;
+            align-content: center;
+            font-family: 'Nunito', sans-serif;
+            margin-left: 2rem;
+            
+         }
+       
+        
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="logo">
+            <h1>Restoran</h1>
+        </div>
+        <div class="navbar">
+            <div class="nav-items">
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#menu">Menu</a></li>
+                    <li><a href="#pages">Pages</a></li>
+                    <li><a href="#contact">Contact</a></li>   
+                </ul>
+                <div class="book">
+                    <button>BOOK A TABLE</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="main-body">
+        <div class="first-front">
+            <div class="text-contain">
+                <h1 style="font-weight: 800;">Enjoy Our
+                    Delicious Meal</h1>
+                <pre>Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit. Aliqu diam amet diam et eos. Clita erat ipsum et
+                     lorem et sit, sed stet lorem sit clita duo justo magna dolore
+                     erat ameterat amet</pre>
+                <button ><a href="#contact">Book A Table</a></button>
+            </div>
+            <div class="rotating-pizza">
+                <img src="https://cdn.pixabay.com/photo/2022/10/06/22/22/pizza-7503664_640.png" alt="round pizza">
+            </div>
+        </div>
+    </div>
+    
+</body>
+</html>
