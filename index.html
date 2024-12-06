@@ -1,114 +1,286 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Restoran</title>
-    <!-- font links -->
-    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>STEAK HOUSE</title>
+  <style>
 
-    <style>
-        *{
-            text-decoration: none;
-        }
-        body{
-            margin: 0 2rem;
-            /* border: 2px solid black; */
-        }
-        .header{
-            display: flex;
-            justify-content: space-between;
-            /* background-color: #1F1527; */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
 
-        }
+    body {
+      font-family: 'Arial', sans-serif;
+      background-color: #f8f9fa;
+    }
 
-        .navbar{
-            display: flex;
-            flex:end;
-            align-items: center;
-            justify-content: space-between;
-           
-        }
-        .nav-items,ul,li{
-            display: flex;
-            justify-content: space-around;
-            text-decoration: none;
-            gap: 4rem;
-            font-size: 1.2rem;
-            font-weight: 15px;
+   
+    .header {
+        background: url('stake3.jpg') no-repeat center center/cover;
+        height: 100vh;
+        position: relative;
+        color: #100b25;
+        background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcToMozkkZv6pQonP3nn1BlXT2uLTWJxeshxYA&s);
+      }
+      
+      body, html {
+        height: 100%; 
+      }
 
-        }
-        .nav-items,ul,li:after{
-            color: #FEA116;
-            
-            
-          
-        }
-        .book{
-            margin-top: 10px;
-        }
-        button{
-            background-color: #FEA116; 
-            padding: 10px;
-            color: white;
-            margin-left: 5px;
-        }
-        .first-front{
-            display: flex;
-            justify-content: space-between;
-            border: 2px solid black;
-            
-        }
-        /* .text-contain, rotating-pizza{
-            border: 2px solid black;
-        } */
-         .text-contain{
-            width: 50%;
-            align-content: center;
-            font-family: 'Nunito', sans-serif;
-            margin-left: 2rem;
-            
-         }
-       
-        
-    </style>
+    .overlay {
+      background-color: rgba(0, 0, 0, 0.6);
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%; 
+      height: 100%;
+      z-index: 1;
+    }
+
+    .navbar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1rem 3rem;
+        position: sticky;
+        top: 0;
+        background-color: rgba(0, 0, 0, 0.7); 
+        z-index: 1000; 
+      }
+    .logo {
+      display: flex;
+      align-items: center;
+      font-size: 1.5rem;
+      font-weight: bold;
+      color: #f8a94b;
+    }
+
+    .logo img {
+      width: 30px;
+      height: 30px;
+      margin-right: 10px;
+    }
+
+ 
+    .nav-links {
+      display: flex;
+      align-items: center; 
+      gap: 1rem;
+    }
+
+    .nav-links a {
+      color: #fff;
+      text-decoration: none;
+      font-size: 1rem;
+      font-weight: 600;
+    }
+
+    .nav-links a:hover {
+      color: #f8a94b;
+    }
+
+    .nav-links .btn {
+      background-color: #f8a94b;
+      padding: 0.5rem 1rem;
+      border-radius: 5px;
+      color: #fff;
+      text-decoration: none;
+      font-size: 1rem;
+    }
+
+    .nav-links .btn:hover {
+      background-color: #d98028;
+    }
+
+    .content {
+      position: absolute;
+      top: 50%;
+      left: 10%;
+      transform: translateY(-50%);
+      z-index: 2;
+      /* background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcToMozkkZv6pQonP3nn1BlXT2uLTWJxeshxYA&s); */
+      color: #fff;
+    }
+
+    .content h1 {
+      font-size: 3.5rem;
+      line-height: 1.2;
+      margin-bottom: 1rem;
+    }
+
+    .content p {
+      font-size: 1.2rem;
+      margin-bottom: 2rem;
+      max-width: 600px;
+    }
+
+    .content .btn {
+      background-color: #f8a94b;
+      padding: 0.75rem 1.5rem;
+      border-radius: 5px;
+      color: #fff;
+      text-decoration: none;
+      font-size: 1rem;
+    }
+
+    .content .btn:hover {
+      background-color: #d98028;
+    }
+
+    .center-image {
+      position: absolute;
+      top: 50%;
+      right: 10%;
+      transform: translateY(-50%);
+      z-index: 3;
+      border-radius: 10px;
+      width: 400px;
+      height: auto;
+      animation: rotateImage 20s linear infinite;
+    }
+
+    @keyframes rotateImage {
+      0% {
+        transform: translateY(-50%) rotate(0deg);
+      }
+      100% {
+        transform: translateY(-50%) rotate(360deg);
+      }
+    }
+
+    .features {
+      display:flex;
+      justify-content: space-around;
+      margin-top: 50px;
+      padding: 40px;
+      background-color: #f8f9fa;
+    }
+
+    .feature-item:hover{
+        background-color: orangered;
+        color: white;
+        text-decoration: white;
+    }
+
+    .feature-item {
+      text-align: center;
+      padding: 20px;
+      background-color: #fff;
+      border-radius: 8px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      width: 22%;
+    }
+
+    .feature-item img {
+      width: 50px;
+      margin-bottom: 20px;
+    }
+
+    .feature-item h3 {
+      font-size: 1.2rem;
+      margin-bottom: 10px;
+    }
+
+    .feature-item p {
+      font-size: 0.9rem;
+      color: #666;
+      text-align: justify;
+    }
+    .about-us{
+        display: flex;
+    }
+
+    .about-us-images{
+        display: flex;
+    }
+
+
+    
+
+  </style>
 </head>
 <body>
-    <div class="header">
-        <div class="logo">
-            <h1>Restoran</h1>
-        </div>
-        <div class="navbar">
-            <div class="nav-items">
-                <ul>
-                    <li><a href="#home">Home</a></li>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#services">Services</a></li>
-                    <li><a href="#menu">Menu</a></li>
-                    <li><a href="#pages">Pages</a></li>
-                    <li><a href="#contact">Contact</a></li>   
-                </ul>
-                <div class="book">
-                    <button>BOOK A TABLE</button>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="main-body">
-        <div class="first-front">
-            <div class="text-contain">
-                <h1 style="font-weight: 800;">Enjoy Our
-                    Delicious Meal</h1>
-                <pre>Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit. Aliqu diam amet diam et eos. Clita erat ipsum et
-                     lorem et sit, sed stet lorem sit clita duo justo magna dolore
-                     erat ameterat amet</pre>
-                <button ><a href="#contact">Book A Table</a></button>
-            </div>
-            <div class="rotating-pizza">
-                <img src="https://cdn.pixabay.com/photo/2022/10/06/22/22/pizza-7503664_640.png" alt="round pizza">
-            </div>
-        </div>
-    </div>
     
-</body>
+
+  <div class="header">
+    <div class="overlay"></div>
+    <div class="navbar">
+     
+      <div class="logo">
+        <img src="https://img.icons8.com/ios-filled/50/f8a94b/restaurant.png" alt="Logo Icon">
+        <span>STEAK HOUSE</span>
+      </div>
+  
+      <div class="nav-links">
+        <a href="#">Home</a>
+        <a href="#about-us">About</a> 
+        <a href="#">Service</a>
+        <a href="#">Menu</a>
+        <a href="#">Contact</a>
+        <a href="#" class="btn">Book a Table</a>
+      </div>
+    </div>
+    <div class="content">
+      <h1>Enjoy Our Delicious Steak</h1>
+      <p>Savor the finest cuts of meat, grilled to perfection at Stakehouse. Enjoy a mouthwatering steak experience that’ll keep you coming back for more.</p>
+      <a href="#" class="btn">Book a Table</a>
+    </div>
+    <img src="https://themewagon.github.io/restoran/img/hero.png" alt="Delicious Meal" class="center-image">
+  </div>
+
+  
+  <div class="features">
+    <div class="feature-item">
+      <img src="https://img.icons8.com/ios-filled/50/f8a94b/chef-hat.png" alt="Master Chefs">
+      <h3>Master Chefs</h3>
+      <p>At Steakhouse, our steaks are crafted by expert chefs who bring years of experience to your plate. Every cut is prepared with precision, ensuring a dining experience like no other.</p>
+    </div>
+    <div class="feature-item">
+      <img src="https://img.icons8.com/ios-filled/50/f8a94b/food.png" alt="Quality Food">
+      <h3>Quality Food</h3>
+      <p>Craving a delicious steak? Ordering from Stakehouse is simple! Browse our menu online, select your favorites, and have them delivered straight to your door. The best in steak is now just a few clicks away.</p>
+    </div>
+    <div class="feature-item">
+      <img src="https://img.icons8.com/ios-filled/50/f8a94b/shopping-cart.png" alt="Online Order">
+      <h3>Online Order</h3>
+      <p>Ordering from Stakehouse is simple! Browse our menu online,  The best in steak is now just a few clicks away.</p>
+    </div>
+    <div class="feature-item">
+        <img src="https://img.icons8.com/ios-filled/50/f8a94b/customer-support.png" alt="24/7 Service Icon">
+      <h3>24/7 Service</h3>
+      <p>Hungry at any hour? Stakehouse is here for you! With our 24
+        hours service, you can order your favorite steak whenever you want.</p>
+    </div>  
+  </div>
+
+  <!-- about us page -->
+  <div class="about-us" id="about-us">  
+    <div class="about-us-images">
+        <div class="images-first-row">
+            <div><img src="https://themewagon.github.io/restoran/img/about-1.jpg" alt="picture1" style="height: 350px; width: auto;">1</div>
+            <div><img src="https://themewagon.github.io/restoran/img/about-2.jpg" alt="picture2" style="height: 250px; width: auto; margin:0px 0px 100px 0px;">2</div>
+        </div>
+        
+       <div class="images-second-row">
+
+            <div><img src="https://themewagon.github.io/restoran/img/about-3.jpg" alt="picture3" style="height: 250px; width: auto; margin-left: 10px;">3</div>
+            <div><img src="https://themewagon.github.io/restoran/img/about-4.jpg" alt="picture4" style="height: 350px; width: auto; margin-top: 100px;">4</div>
+       </div>
+
+    </div>
+
+
+
+    
+
+    <div class="about-us-text">
+        <h1>about us</h1>
+
+    </div>
+  </div>   
+  <script src="https://cdn.jsdelivr.net/npm/flowbite@2.5.2/dist/flowbite.min.js"></script>
+  </body> 
 </html>
