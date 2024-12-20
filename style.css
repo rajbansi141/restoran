@@ -1,5 +1,3 @@
-
-
 * {
   margin: 0;
   padding: 0;
@@ -7,43 +5,43 @@
 }
 
 body {
-  font-family: 'Arial', sans-serif;
-  background-color: #f8f9fa;
+  font-family: "Nunito", sans-serif;
+  background-color: #f1f8ff;
 }
 
-
 .header {
-    background: url('stake3.jpg') no-repeat center center/cover;
-    height: 100vh;
-    position: relative;
-    color: #100b25;
-    background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcToMozkkZv6pQonP3nn1BlXT2uLTWJxeshxYA&s);
-  }
-  
-  body, html {
-    height: 100%; 
-  }
+  background: url("stake3.jpg") no-repeat center center/cover;
+  height: 100vh;
+  position: relative;
+  color: #100b25;
+  background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcToMozkkZv6pQonP3nn1BlXT2uLTWJxeshxYA&s);
+}
+
+body,
+html {
+  height: 100%;
+}
 
 .overlay {
   background-color: rgba(0, 0, 0, 0.6);
   position: absolute;
   top: 0;
   left: 0;
-  width: 100%; 
+  width: 100%;
   height: 100%;
   z-index: 1;
 }
 
 .navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1rem 3rem;
-    position: sticky;
-    top: 0;
-    background-color: rgba(0, 0, 0, 0.7); 
-    z-index: 1000; 
-  }
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 3rem;
+  position: sticky;
+  top: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 1000;
+}
 .logo {
   display: flex;
   align-items: center;
@@ -58,10 +56,9 @@ body {
   margin-right: 10px;
 }
 
-
 .nav-links {
   display: flex;
-  align-items: center; 
+  align-items: center;
   gap: 1rem;
 }
 
@@ -146,17 +143,17 @@ body {
 }
 
 .features {
-  display:flex;
+  display: flex;
   justify-content: space-around;
   margin-top: 50px;
   padding: 40px;
   background-color: #f8f9fa;
 }
 
-.feature-item:hover{
-    background-color: orangered;
-    color: white;
-    text-decoration: white;
+.feature-item:hover {
+  background-color: orangered;
+  color: white;
+  text-decoration: white;
 }
 
 .feature-item {
@@ -183,35 +180,149 @@ body {
   color: #666;
   text-align: justify;
 }
-.about-us{
-    display: flex;
-    margin: 20px;
+.about-us {
+  display: flex;
+  margin: 20px;
+  /* border: 2px solid black; */
+}
+.about-us-text {
+  width: 50%;
+  /* border: 2px solid red; */
+  padding-top: 130px;
+  /* align-content: center; */
 }
 
-.about-us-images{
-    display: flex;
-    animation:glowImages;
+.about-us-images {
+  display: flex;
+  width: 50%;
+  animation: glowImages;
 }
 
 @keyframes glowImages {
-    0%{
-        
-    }
-    100%{
-        
-    }                
+  0% {
+  }
+  100% {
+  }
 }
-.about-us-text h5{
-    font-family:Pacifico, cursive ;
-    color: RGB(254, 161, 22);
-    font-size: 40px;
-    font-weight: 400;
-    
+.about-us-text h5  {
+  font-family: Pacifico, cursive;
+  color: RGB(254, 161, 22);
+  font-size: 40px;
+  font-weight: 400;
 }
-.about-us-text h1{
-    font-family:Nunito, sans-serif;
-    font-size: 40px;
-    
+.about-us-text h1 {
+  font-family: Nunito, sans-serif;
+  font-size: 40px;
+}
 
-    
+/* button{
+    background-color: RGB(254, 161, 22);
+    padding: 10px 20px;
+    border: none;
+    border-radius: 10px;
+    color: white;
+}
+
+button:hover{    
+    background-color: yellow;
+    color: black;
+} */
+
+.btn {
+  background-color: #f8a94b;
+  padding: 0.5rem 1rem;
+  /* border-radius: 5px; */
+  color: #fff;
+  text-decoration: none;
+  font-size: 1rem;
+}
+
+.btn:hover {
+  background-color: #d98028;
+}
+
+.menuparent h5  {
+  font-family: Pacifico, cursive;
+  color: RGB(254, 161, 22);
+  font-size: 40px;
+  font-weight: 400;
+  text-align: center;
+}
+.menuparent h1 {
+  font-family: Nunito, sans-serif;
+  font-size: 40px;
+  text-align: center;
+}
+
+
+.menuparent{
+  /* border: 2px solid black; */
+}
+
+.menu-navbar{
+  /* border: 2px solid red ; */
+  width: 100%;
+  display: flex;
+  justify-content: center
+}
+.menu-item{
+  /* border: 2px solid green; */
+  display: flex;
+  justify-content: center;
+  
+}
+
+.menu-item ul li {
+  list-style: none;
+  display: inline-block;
+
+
+  
+}
+
+.material-symbols-outlined{
+  color: RGB(254, 161, 22);
+
+}
+
+.food{
+  margin: 20px;
+  display: flex;
+  /* border: 2px solid orange; */
+}
+
+.food-detail{
+  display: flex;
+  /* border: 2px solid blue; */
+  justify-content: space-between;
+  width: 50%;
+  align-items: center;
+}
+
+.food-detail p{
+  font-size: 1.5rem;
+  color: RGB(254, 161, 22);
+  font-weight: bolder;
+  
+}
+
+.reservation{
+  display: flex;
+  /* border: 2px solid black; */
+
+}
+
+ .reservation-content h5  {
+  font-family: Pacifico, cursive;
+  color: RGB(254, 161, 22);
+  font-size: 40px;
+  font-weight: 400;
+  text-align: center;
+}
+
+.reservation-content h1 {
+  font-family: Nunito, sans-serif;
+  font-size: 40px;
+  text-align: center;
+  justify-content: center;
 }
